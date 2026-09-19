@@ -52,7 +52,7 @@ export const SettledRow = ({ assertionId }: SettledRowProps) => {
 
       {/* Winner Column */}
       <td>
-        <Address address={winner} format="short" onlyEnsOrAddress disableAddressLink size="sm" />
+        <Address address={winner as `0x${string}`} format="short" onlyEnsOrAddress disableAddressLink size="sm" />
       </td>
 
       {/* Reward Column */}

@@ -39,7 +39,13 @@ export const ExpiredRow = ({ assertionId }: { assertionId: number }) => {
 
       {/* Asserter Column */}
       <td>
-        <Address address={assertionData.asserter} format="short" onlyEnsOrAddress disableAddressLink size="sm" />
+        <Address
+          address={assertionData.asserter as `0x${string}`}
+          format="short"
+          onlyEnsOrAddress
+          disableAddressLink
+          size="sm"
+        />
       </td>
 
       {/* Reward Column */}

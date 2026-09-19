@@ -23,9 +23,9 @@ export interface HighlightState {
 }
 
 export interface Assertion {
-  asserter: `0x${string}`;
-  proposer: `0x${string}`;
-  disputer: `0x${string}`;
+  asserter: string;
+  proposer: string;
+  disputer: string;
   proposedOutcome: boolean;
   resolvedOutcome: boolean;
   reward: bigint;
@@ -33,7 +33,7 @@ export interface Assertion {
   startTime: bigint;
   endTime: bigint;
   claimed: boolean;
-  winner: `0x${string}`;
+  winner: string;
   description: string;
 }
 

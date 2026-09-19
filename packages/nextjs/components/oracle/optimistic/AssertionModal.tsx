@@ -74,14 +74,26 @@ const Description = ({ assertion }: { assertion: AssertionWithIdAndState }) => {
       {assertion.proposer !== ZERO_ADDRESS && (
         <div>
           <span className="font-bold">Proposer:</span>{" "}
-          <Address address={assertion.proposer} format="short" onlyEnsOrAddress disableAddressLink size="sm" />
+          <Address
+            address={assertion.proposer as `0x${string}`}
+            format="short"
+            onlyEnsOrAddress
+            disableAddressLink
+            size="sm"
+          />
         </div>
       )}
 
       {assertion.disputer !== ZERO_ADDRESS && (
         <div>
           <span className="font-bold">Disputer:</span>{" "}
-          <Address address={assertion.disputer} format="short" onlyEnsOrAddress disableAddressLink size="sm" />
+          <Address
+            address={assertion.disputer as `0x${string}`}
+            format="short"
+            onlyEnsOrAddress
+            disableAddressLink
+            size="sm"
+          />
         </div>
       )}
     </div>

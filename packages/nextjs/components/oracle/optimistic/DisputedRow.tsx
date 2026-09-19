@@ -29,12 +29,24 @@ export const DisputedRow = ({ assertionId, state }: { assertionId: number; state
 
       {/* Proposer Column */}
       <td>
-        <Address address={assertionData.proposer} format="short" onlyEnsOrAddress disableAddressLink size="sm" />
+        <Address
+          address={assertionData.proposer as `0x${string}`}
+          format="short"
+          onlyEnsOrAddress
+          disableAddressLink
+          size="sm"
+        />
       </td>
 
       {/* Disputer Column */}
       <td>
-        <Address address={assertionData.disputer} format="short" onlyEnsOrAddress disableAddressLink size="sm" />
+        <Address
+          address={assertionData.disputer as `0x${string}`}
+          format="short"
+          onlyEnsOrAddress
+          disableAddressLink
+          size="sm"
+        />
       </td>
 
       {/* Chevron Column */}
